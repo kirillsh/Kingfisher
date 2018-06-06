@@ -250,7 +250,7 @@ extension Kingfisher where Base: Image {
                     gifDuration += frameDuration(from: gifInfo)
                 }
                 
-                images.append(Kingfisher<Image>.image(cgImage: imageRef, scale: scale, refImage: nil))
+                images.append(Kingfisher<Image>.image(cgImage: imageRef, scale: scale, refImage: nil).kf.decoded)
                 
                 if onlyFirstFrame { break }
             }
